@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CrawlAgent", "CrawlAgent\CrawlAgent.pyproj", "{A7E1D816-56CA-40D8-9DA6-9C0D77BEF1CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7E1D816-56CA-40D8-9DA6-9C0D77BEF1CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7E1D816-56CA-40D8-9DA6-9C0D77BEF1CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F015405-D747-40E4-AE47-FCAD98446562}
+	EndGlobalSection
+EndGlobal

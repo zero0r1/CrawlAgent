@@ -15,11 +15,11 @@ NEWSPIDER_MODULE = 'tc.spiders'
 FEED_EXPORT_ENCODING = 'utf-8'
 USER_AGENT_LIST = "C:\\Users\\leahd\Documents\\GitHub\\CrawlAgent\\CrawlAgent\\anjuke\\anjuke\\spiders\\useragents.txt"
 # Retry many times since proxies often fail
-#RETRY_TIMES = 10
+RETRY_TIMES = 3
 # Retry on most error codes since proxies fail for different reasons
 RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
 # Configure a delay for requests for the same website (default: 0)
-DOWNLOAD_DELAY = 1
+#DOWNLOAD_DELAY = 1
 # Disable cookies (enabled by default)
 COOKIES_ENABLED = False
 # Enable downloader middlewares

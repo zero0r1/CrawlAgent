@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>a7e1d816-56ca-40d8-9da6-9c0d77bef1ce</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>anjuke\anjuke\spiders\anjuke_spider.py</StartupFile>
+    <StartupFile>tc\tc\spiders\tc_spider.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -13,7 +13,7 @@
     <RootNamespace>CrawlAgent</RootNamespace>
     <IsWindowsApplication>False</IsWindowsApplication>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
-    <CommandLineArguments>scrapy crawl ganji</CommandLineArguments>
+    <CommandLineArguments>scrapy crawl tc -o tc.json</CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -25,37 +25,70 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="anjuke\anjuke\items.py" />
-    <Compile Include="anjuke\anjuke\middlewares.py" />
-    <Compile Include="anjuke\anjuke\pipelines.py" />
-    <Compile Include="anjuke\anjuke\settings.py" />
-    <Compile Include="anjuke\anjuke\spiders\anjuke_spider.py" />
-    <Compile Include="anjuke\anjuke\spiders\rotate_useragent.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="anjuke\anjuke\spiders\__init__.py" />
-    <Compile Include="anjuke\anjuke\__init__.py" />
-    <Compile Include="ganji\ganji\items.py" />
-    <Compile Include="ganji\ganji\middlewares.py" />
-    <Compile Include="ganji\ganji\pipelines.py" />
-    <Compile Include="ganji\ganji\settings.py" />
-    <Compile Include="ganji\ganji\spiders\ganji_spider.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ganji\ganji\spiders\__init__.py" />
-    <Compile Include="ganji\ganji\__init__.py" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="anjuke\" />
     <Folder Include="anjuke\anjuke\" />
     <Folder Include="anjuke\anjuke\spiders\" />
     <Folder Include="ganji\" />
     <Folder Include="ganji\ganji\" />
     <Folder Include="ganji\ganji\spiders\" />
+    <Folder Include="ganji\ganji\spiders\file\" />
+    <Folder Include="tc\" />
+    <Folder Include="tc\tc\" />
+    <Folder Include="tc\tc\spiders\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="anjuke\anjuke\items.py" />
+    <Compile Include="anjuke\anjuke\middlewares.py" />
+    <Compile Include="anjuke\anjuke\pipelines.py" />
+    <Compile Include="anjuke\anjuke\settings.py" />
+    <Compile Include="anjuke\anjuke\spiders\anjuke_spider.py" />
+    <Compile Include="anjuke\anjuke\spiders\rotate_useragent.py" />
+    <Compile Include="anjuke\anjuke\spiders\__init__.py" />
+    <Compile Include="anjuke\anjuke\__init__.py" />
+    <Compile Include="ganji\ganji\items.py" />
+    <Compile Include="ganji\ganji\middlewares.py" />
+    <Compile Include="ganji\ganji\pipelines.py" />
+    <Compile Include="ganji\ganji\settings.py" />
+    <Compile Include="ganji\ganji\spiders\ganji_spider.py" />
+    <Compile Include="ganji\ganji\spiders\__init__.py" />
+    <Compile Include="ganji\ganji\__init__.py" />
+    <Compile Include="tc\tc\items.py" />
+    <Compile Include="tc\tc\middlewares.py" />
+    <Compile Include="tc\tc\pipelines.py" />
+    <Compile Include="tc\tc\rotate_useragent.py" />
+    <Compile Include="tc\tc\settings.py" />
+    <Compile Include="tc\tc\spiders\tc_spider.py" />
+    <Compile Include="tc\tc\spiders\__init__.py" />
+    <Compile Include="tc\tc\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="anjuke\anjuke\items.pyc" />
+    <Content Include="anjuke\anjuke\settings.pyc" />
+    <Content Include="anjuke\anjuke\spiders\anjuke.json" />
+    <Content Include="anjuke\anjuke\spiders\anjuke_spider.pyc" />
+    <Content Include="anjuke\anjuke\spiders\list.txt" />
+    <Content Include="anjuke\anjuke\spiders\rotate_useragent.pyc" />
+    <Content Include="anjuke\anjuke\spiders\useragents.txt" />
+    <Content Include="anjuke\anjuke\spiders\__init__.pyc" />
+    <Content Include="anjuke\anjuke\__init__.pyc" />
     <Content Include="anjuke\scrapy.cfg" />
+    <Content Include="ganji\ganji\items.pyc" />
+    <Content Include="ganji\ganji\settings.pyc" />
+    <Content Include="ganji\ganji\spiders\anjuke.json" />
+    <Content Include="ganji\ganji\spiders\file\ganji.json" />
+    <Content Include="ganji\ganji\spiders\ganji_spider.pyc" />
+    <Content Include="ganji\ganji\spiders\__init__.pyc" />
+    <Content Include="ganji\ganji\__init__.pyc" />
     <Content Include="ganji\scrapy.cfg" />
+    <Content Include="tc\scrapy.cfg" />
+    <Content Include="tc\tc\items.pyc" />
+    <Content Include="tc\tc\middlewares.pyc" />
+    <Content Include="tc\tc\rotate_useragent.pyc" />
+    <Content Include="tc\tc\settings.pyc" />
+    <Content Include="tc\tc\spiders\tc.json" />
+    <Content Include="tc\tc\spiders\tc_spider.pyc" />
+    <Content Include="tc\tc\spiders\__init__.pyc" />
+    <Content Include="tc\tc\__init__.pyc" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

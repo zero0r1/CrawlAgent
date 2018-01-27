@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>a7e1d816-56ca-40d8-9da6-9c0d77bef1ce</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>ganji\ganji\spiders\ganji_spider.py</StartupFile>
+    <StartupFile>anjuke\anjuke\spiders\anjuke_spider.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,6 +25,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="anjuke\anjuke\items.py" />
+    <Compile Include="anjuke\anjuke\middlewares.py" />
+    <Compile Include="anjuke\anjuke\pipelines.py" />
+    <Compile Include="anjuke\anjuke\settings.py" />
+    <Compile Include="anjuke\anjuke\spiders\anjuke_spider.py" />
+    <Compile Include="anjuke\anjuke\spiders\rotate_useragent.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="anjuke\anjuke\spiders\__init__.py" />
+    <Compile Include="anjuke\anjuke\__init__.py" />
     <Compile Include="ganji\ganji\items.py" />
     <Compile Include="ganji\ganji\middlewares.py" />
     <Compile Include="ganji\ganji\pipelines.py" />
@@ -36,11 +46,15 @@
     <Compile Include="ganji\ganji\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="anjuke\" />
+    <Folder Include="anjuke\anjuke\" />
+    <Folder Include="anjuke\anjuke\spiders\" />
     <Folder Include="ganji\" />
     <Folder Include="ganji\ganji\" />
     <Folder Include="ganji\ganji\spiders\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="anjuke\scrapy.cfg" />
     <Content Include="ganji\scrapy.cfg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for anjuke project
+# Scrapy settings for tc project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used.  You can find more settings consulting the documentation:
@@ -8,18 +8,26 @@
 #     https://doc.scrapy.org/en/latest/topics/settings.html
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-BOT_NAME = 'anjuke'
+BOT_NAME = 'tc'
 
-SPIDER_MODULES = ['anjuke.spiders']
-NEWSPIDER_MODULE = 'anjuke.spiders'
+SPIDER_MODULES = ['tc.spiders']
+NEWSPIDER_MODULE = 'tc.spiders'
 FEED_EXPORT_ENCODING = 'utf-8'
-COOKIES_ENABLED = False
 USER_AGENT_LIST = "C:\\Users\\leahd\Documents\\GitHub\\CrawlAgent\\CrawlAgent\\anjuke\\anjuke\\spiders\\useragents.txt"
+# Retry many times since proxies often fail
+#RETRY_TIMES = 10
+# Retry on most error codes since proxies fail for different reasons
+RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
+# Configure a delay for requests for the same website (default: 0)
+DOWNLOAD_DELAY = 1
+# Disable cookies (enabled by default)
+COOKIES_ENABLED = False
+# Enable downloader middlewares
 
 
 # Crawl responsibly by identifying yourself (and your website) on the
 # user-agent
-#USER_AGENT = 'anjuke (+http://www.yourdomain.com)'
+#USER_AGENT = 'tc (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -51,15 +59,17 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'anjuke.middlewares.AnjukeSpiderMiddleware': 543,
+#    'tc.middlewares.TcSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    #'anjuke.middlewares.AnjukeDownloaderMiddleware': 543,
-    'random_useragent.RandomUserAgentMiddleware': 400
+    #'tc.middlewares.TcDownloaderMiddleware': 543,
+    #'random_useragent.RandomUserAgentMiddleware': 400,
+    'tc.rotate_useragent.RotateUserAgentMiddleware': 400
 }
+
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -70,7 +80,7 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'anjuke.pipelines.AnjukePipeline': 300,
+#    'tc.pipelines.TcPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -87,7 +97,8 @@ DOWNLOADER_MIDDLEWARES = {
 #AUTOTHROTTLE_DEBUG = False
 
 # Enable and configure HTTP caching (disabled by default)
-# See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
+# See
+# https://doc.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
 #HTTPCACHE_ENABLED = True
 #HTTPCACHE_EXPIRATION_SECS = 0
 #HTTPCACHE_DIR = 'httpcache'

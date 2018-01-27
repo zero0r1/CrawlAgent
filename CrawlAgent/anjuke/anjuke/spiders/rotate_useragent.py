@@ -1,5 +1,4 @@
 # -*-coding:utf-8-*-
-# -*-coding:utf-8-*-
 from scrapy import log  
   
 """避免被ban策略之一：使用useragent池。 
